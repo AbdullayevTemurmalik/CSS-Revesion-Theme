@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+    />
+    <title>CSS Revision | TemurMalik</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo-wrapper" id="mainLogo">
+          <div class="css-icon">C</div>
+          <span class="logo-name">CSS Guide</span>
+        </div>
+
+        <div class="category-menu">
+          <button class="menu-btn active" data-category="all">Hammasi</button>
+          <button class="menu-btn" data-category="Asoslar">Asoslar</button>
+          <button class="menu-btn" data-category="Selectors">Selectors</button>
+          <button class="menu-btn" data-category="Box Model">Box Model</button>
+          <button class="menu-btn" data-category="Flexbox">Flexbox</button>
+          <button class="menu-btn" data-category="Grid">Grid</button>
+          <button class="menu-btn" data-category="Position">Position</button>
+          <button class="menu-btn" data-category="Animation">Animation</button>
+          <button class="menu-btn" data-category="Tailwind">Tailwind</button>
+        </div>
+
+        <a
+          href="https://github.com/AbdullayevTemurmalik"
+          target="_blank"
+          class="github-link"
+        >
+          <i class="bx bxl-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>CSS Dizayn sirlarini o'rganing</h1>
+      <p class="subtitle">Tayyor kodlar va oson tushuntirishlar</p>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="CSS xususiyatini qidiring..."
+      />
+      <div id="results"></div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
