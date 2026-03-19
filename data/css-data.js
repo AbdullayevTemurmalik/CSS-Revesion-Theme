@@ -6,7 +6,7 @@ export const cssData = [
     desc: "Agar HTML-ni uyning g'ishti desak, CSS - bu uyning bo'yog'i va dizaynidir.",
     reja: "CSS-ni ulash va asosiy ranglar bilan ishlash.",
     vazifa: "Orqa fon rangini o'zgartiring.",
-    code: "body {\n  background-color: #020617; /* To'q ko'k (Indigo) */\n  color: #ffffff; /* Oq */\n}",
+    code: "body {\n  background-color: #0cacd4d4; /* To'q ko'k (Indigo) */\n  color: #ffffff; /* Oq */\n}",
     result:
       "<div style='background-color: #020617; color: #ffffff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #1e293b;'>To'q ko'k fonda oq matn</div>",
   },
