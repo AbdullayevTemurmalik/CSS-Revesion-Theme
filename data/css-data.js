@@ -3,133 +3,143 @@ export const cssData = [
     id: 1,
     title: "CSS nima o'zi? (Asoslar)",
     category: "Asoslar",
-    desc: "Agar HTML-ni uyning g'ishti desak, CSS - bu uyning bo'yog'i, dizayni va pardozidir. CSS saytni chiroyli qiladi.",
-    reja: "CSS-ni ulash (External, Internal, Inline), ranglar va shriftlar.",
-    vazifa:
-      "index.html faylingizga style.css-ni ulab, orqa fon rangini o'zgartiring.",
-    example:
-      "/* style.css faylida yoziladi */\nbody {\n  background-color: #020617;\n  color: white;\n}",
+    desc: "Agar HTML-ni uyning g'ishti desak, CSS - bu uyning bo'yog'i va dizaynidir.",
+    reja: "CSS-ni ulash va asosiy ranglar bilan ishlash.",
+    vazifa: "Orqa fon rangini o'zgartiring.",
+    code: "body {\n  background-color: #020617; /* To'q ko'k (Indigo) */\n  color: #ffffff; /* Oq */\n}",
+    result:
+      "<div style='background-color: #020617; color: #ffffff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #1e293b;'>To'q ko'k fonda oq matn</div>",
   },
   {
     id: 2,
     title: "Tanlab olish (Selectors)",
     category: "Selectors",
-    desc: "CSS-da biron bir elementga rang berish uchun avval uni 'chaqirib' olish kerak. Bu xuddi: 'Ey ko'k ko'ylakli bola, botiq kel' degan gapdek gap.",
-    reja: "Teg nomi, Class (.) va ID (#) orqali elementlarni tanlash.",
-    vazifa:
-      "Bitta sarlavhaga ID berib rangini qizil, class berib matnini o'rtaga tekislang.",
-    example:
-      ".mening-classim { color: blue; }\n#mening-idim { font-size: 20px; }",
+    desc: "Elementni class (.) yoki ID (#) orqali chaqirib olish.",
+    reja: "Class va ID selektorlari farqi.",
+    vazifa: "Sarlavhaga class orqali moviy rang bering.",
+    code: ".moviy-matn {\n  color: #0ea5e9; /* Moviy (Cyan) */\n}\n#katta-matn {\n  font-size: 24px;\n}",
+    result:
+      "<div style='color: #0ea5e9; margin-bottom: 5px; font-weight: 600;'>Moviy matn (.class)</div><div style='font-size: 20px; color: #f1f5f9;'>Katta matn (#id)</div>",
   },
   {
     id: 3,
     title: "Box Model (Quti modeli)",
     category: "Box Model",
-    desc: "HTML-dagi har bir element - bu bitta quti. Uning chegarasi (border), ichki masofasi (padding) va tashqi masofasi (margin) bor.",
-    reja: "Content, Padding, Border va Margin farqlarini tushunish.",
-    vazifa:
-      "Bitta div yarating, unga chegara bering va ichidan joy oching (padding).",
-    example:
-      ".box {\n  margin: 20px; /* Tashqi tomondan surish */\n  padding: 10px; /* Ichki tomondan surish */\n  border: 2px solid white;\n}",
+    desc: "Har bir element - bu quti. Uning padding, border va margin-i bor.",
+    reja: "Ichki va tashqi masofalarni boshqarish.",
+    vazifa: "Moviy chegarali quti yarating.",
+    code: ".box {\n  margin: 10px;\n  padding: 15px;\n  border: 2px solid #0ea5e9; /* Moviy chegara */\n}",
+    result:
+      "<div style='border: 2px solid #0ea5e9; padding: 15px; margin: 10px; background: rgba(14, 165, 233, 0.1); color: #0ea5e9; display: inline-block; border-radius: 8px;'>Moviy quti modeli</div>",
   },
   {
     id: 4,
     title: "Ranglar va Fonlar",
     category: "Asoslar",
-    desc: "Saytga rang berishning 3 xil yo'li bor: nomi (red), RGB kodi yoki HEX kodi (#ffffff). Shuningdek, orqaga rasm ham qo'ysa bo'ladi.",
-    reja: "Color, background-color, background-image va gradientlar.",
-    vazifa:
-      "Saytingiz foniga chiroyli ranglar aralashmasi (linear-gradient) bering.",
-    example:
-      ".header {\n  background: linear-gradient(to right, #0ea5e9, #2563eb);\n}",
+    desc: "Saytga rang berishning turli yo'llari: HEX kodlari va Gradientlar.",
+    reja: "Background va linear-gradient ishlatish.",
+    vazifa: "Moviy va ko'k rangli gradient fon yarating.",
+    code: ".header {\n  background: linear-gradient(to right, #0ea5e9, #2563eb);\n}",
+    result:
+      "<div style='background: linear-gradient(to right, #0ea5e9, #2563eb); color: #ffffff; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold;'>Haqiqiy Gradient Fon</div>",
   },
   {
     id: 5,
-    title: "Flexbox (Moslashuvchan joylashuv)",
+    title: "Flexbox (Joylashuv)",
     category: "Flexbox",
-    desc: "Elementlarni bitta qatorga terish va ularni o'rtaga yoki chetga tekislash uchun eng zo'r qurol - bu Flexbox.",
-    reja: "display: flex, justify-content, align-items va gap.",
-    vazifa:
-      "3 ta qutini bitta qatorga yonma-yon terib, oralarini ochib qo'ying.",
-    example:
-      ".container {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}",
+    desc: "Elementlarni bitta qatorga chiroyli terish usuli.",
+    reja: "Display flex va justify-content tushunchasi.",
+    vazifa: "3 ta moviy blokni yonma-yon o'rtada joylang.",
+    code: ".container {\n  display: flex;\n  justify-content: center;\n  gap: 15px;\n}",
+    result:
+      "<div style='display: flex; justify-content: center; gap: 15px; background: #1e293b; padding: 15px; border-radius: 10px;'><div style='background: #0ea5e9; width: 30px; height: 30px; border-radius: 6px;'></div><div style='background: #0ea5e9; width: 30px; height: 30px; border-radius: 6px;'></div><div style='background: #0ea5e9; width: 30px; height: 30px; border-radius: 6px;'></div></div>",
   },
   {
     id: 6,
     title: "Position (Joylashuv)",
     category: "Position",
-    desc: "Elementni ekranning xohlagan joyiga 'mixlab' qo'yish yoki uni joyidan biroz surish uchun ishlatiladi.",
-    reja: "Relative, Absolute va Fixed (ekranda qotib turish) joylashuvlari.",
-    vazifa: "Navbar-ni tepada qotib turadigan (fixed) holatga keltiring.",
-    example: ".navbar {\n  position: sticky;\n  top: 0;\n  z-index: 1000;\n}",
+    desc: "Elementni ekranda qotirib qo'yish yoki surish.",
+    reja: "Sticky va Z-index bilan ishlash.",
+    vazifa: "Navbarni moviy chegara bilan tepada qotiring.",
+    code: ".navbar {\n  position: sticky;\n  top: 0;\n  border-top: 3px solid #0ea5e9; /* Moviy chiziq */\n}",
+    result:
+      "<div style='background: #0f172a; color: #0ea5e9; padding: 10px; text-align: center; border-radius: 8px; border-top: 3px solid #0ea5e9; box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);'>Sticky Navbar ko'rinishi</div>",
   },
   {
     id: 7,
-    title: "CSS Grid (Jadval tartibi)",
+    title: "CSS Grid (Setka)",
     category: "Grid",
-    desc: "Flexbox - bitta qator uchun, Grid esa butun bir 'setka' (katakchalar) yaratish uchun ishlatiladi.",
-    reja: "display: grid, grid-template-columns va grid-gap.",
-    vazifa: "Saytda 4 ta ustundan iborat rasmgalereya setkasini yasang.",
-    example:
-      ".gallery {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 15px;\n}",
+    desc: "Murakkab jadvallar (layout) yasash uchun ishlatiladi.",
+    reja: "Grid-template-columns va gap xususiyati.",
+    vazifa: "4 ta ustunli moviy setka yasang.",
+    code: ".gallery {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 10px;\n}",
+    result:
+      "<div style='display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;'><div style='background: #0ea5e9; height: 20px; border-radius: 4px;'></div><div style='background: #38bdf8; height: 20px; border-radius: 4px;'></div><div style='background: #0ea5e9; height: 20px; border-radius: 4px;'></div><div style='background: #38bdf8; height: 20px; border-radius: 4px;'></div></div>",
   },
   {
     id: 8,
     title: "O'lchamlar (px, rem, %)",
     category: "Asoslar",
-    desc: "CSS-da o'lchamlarni har xil berish mumkin. 'px' qotib turadi, '%' esa ekranga qarab o'zgaradi.",
-    reja: "Pixel (px), Percentage (%), REM va VH/VW o'lchov birliklari.",
-    vazifa: "Konteyner kengligini 80% qilib, o'rtaga joylang (margin: auto).",
-    example:
-      ".container {\n  width: 80%;\n  max-width: 1200px;\n  margin: auto;\n}",
+    desc: "O'lchamlarni to'g'ri berish saytni hamma ekranda bir xil qiladi.",
+    reja: "Pixel va Foiz (%) farqini bilish.",
+    vazifa: "Blokni 80% kenglikda markazga joylang.",
+    code: ".container {\n  width: 80%;\n  margin: 0 auto;\n  background-color: #1e293b;\n}",
+    result:
+      "<div style='width: 80%; margin: 0 auto; background: #1e293b; padding: 10px; border-radius: 8px; color: #94a3b8; text-align: center; border: 1px solid #334155;'>80% Markazlashgan blok</div>",
   },
   {
     id: 9,
-    title: "Transitions (Yumshoq o'tishlar)",
+    title: "Transitions (Yumshoqlik)",
     category: "Animation",
-    desc: "Tugmaning ustiga borganda rangi darrov emas, sekin va chiroyli o'zgarishi uchun 'transition' kerak.",
-    reja: "transition-duration, transition-property va ease-in-out.",
-    vazifa:
-      "Tugma ustiga borganda u sekin kattalashadigan (transform: scale) qiling.",
-    example:
-      ".btn {\n  transition: all 0.3s ease;\n}\n.btn:hover { transform: scale(1.1); }",
+    desc: "Rang yoki hajm o'zgarishini silliq qilish.",
+    reja: "Hover effekti va transition vaqti.",
+    vazifa: "Tugma ustiga borganda moviy rangga kirsin.",
+    code: ".btn {\n  transition: 0.3s;\n}\n.btn:hover {\n  background-color: #0ea5e9;\n}",
+    result:
+      "<button style='padding: 10px 20px; background: #1e293b; color: #0ea5e9; border: 1px solid #0ea5e9; border-radius: 8px; cursor: pointer; transition: 0.3s;'>Hover qilib ko'ring</button>",
   },
   {
     id: 10,
-    title: "Animations (Harakatlar)",
+    title: "Animations (Harakat)",
     category: "Animation",
-    desc: "Saytingizdagi elementlarni xohlagancha aylantirish, uchirish yoki sakratish uchun ishlatiladi.",
-    reja: "@keyframes va animation xususiyatlari.",
-    vazifa: "Logotipni har doim sekin aylanib turadigan qiling.",
-    example:
-      "@keyframes spin {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n.logo { animation: spin 5s linear infinite; }",
+    desc: "Elementlarni to'xtovsiz harakatlantirish.",
+    reja: "@keyframes va infinite aylanish.",
+    vazifa: "Moviy yuklanish belgisini yasang.",
+    code: "@keyframes spin {\n  to { transform: rotate(360deg); }\n}\n.loader {\n  border: 3px solid #0ea5e9;\n  animation: spin 2s linear infinite;\n}",
+    result:
+      "<div style='display: flex; align-items: center; justify-content: center; gap: 10px;'><div style='width: 20px; height: 20px; border: 3px solid #0ea5e9; border-top-color: transparent; border-radius: 50%;'></div> <span style='color: #0ea5e9;'>Aylanayotgan element...</span></div>",
   },
   {
     id: 11,
-    title: "Media Queries (Telefonlar uchun)",
+    title: "Media Queries (Mobil)",
     category: "Asoslar",
-    desc: "Saytingiz kompyuterda ham, telefonda ham bir xil chiroyli ko'rinishi uchun media so'rovlar kerak.",
-    reja: "@media (max-width: 768px) va mobil dizayn.",
-    vazifa: "Ekran 600px dan kichrayganda sarlavha shriftini kichraytiring.",
-    example: "@media (max-width: 600px) {\n  h1 { font-size: 20px; }\n}",
+    desc: "Telefonlarda dizaynni o'zgartirish.",
+    reja: "Max-width orqali mobil versiya yasash.",
+    vazifa: "Ekran kichrayganda matnni moviy qiling.",
+    code: "@media (max-width: 600px) {\n  body { color: #0ea5e9; }\n}",
+    result:
+      "<div style='background: #334155; color: #0ea5e9; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #0ea5e9;'>📱 Mobil ko'rinish namunasi</div>",
   },
   {
     id: 12,
     title: "Final: CSS Master!",
     category: "Asoslar",
-    desc: "Tabriklayman! Siz endi dizayn olamining kalitini qo'lga kiritdingiz. Endi bor bilimingizni bitta loyihada ishlating.",
-    reja: "Portfolio yoki Landing page dizaynini noldan chizish.",
-    vazifa: "O'zingiz haqingizda neon uslubidagi chiroyli vizitka sayt yasang.",
-    example: "/* Omad yor bo'lsin, dizayner! */",
+    desc: "Siz endi haqiqiy CSS ustasisiz!",
+    reja: "Barcha bilimlarni bitta loyihaga jamlash.",
+    vazifa: "Professional portfolio dizayni.",
+    code: "/* Muvaffaqiyatli yakunlandi! */",
+    result:
+      "<div style='background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 15px; border-radius: 12px; text-align: center; font-weight: bold; border: 1px solid #10b981;'>🎉 Tabriklaymiz! CSS kursini bitirdingiz.</div>",
   },
   {
     id: 13,
     title: "Tailwind CSS (Modern)",
     category: "Tailwind",
-    desc: "Tailwind - bu tayyor class-lar to'plami. CSS fayl ochmasdan HTML-ning o'zida dizayn berish mumkin.",
-    reja: "Utility-first tushunchasi, ranglar (bg-blue-500) va padding (p-4).",
-    vazifa: "CDN orqali Tailwind-ni ulab, bitta chiroyli tugma yasang.",
-    example:
-      "\n<button class='bg-blue-500 p-4 rounded-xl text-white'>\n  Tugma\n</button>",
+    desc: "Tayyor classlar to'plami bilan tezkor ishlash.",
+    reja: "Utility classlar va moviy ranglar.",
+    vazifa: "Tailwind orqali moviy tugma yasang.",
+    code: "<button class='bg-sky-500 p-4 rounded-xl text-white'>\n  Tugma\n</button>",
+    result:
+      "<button style='background-color: #0ea5e9; padding: 12px 24px; border-radius: 12px; color: #ffffff; border: none; font-weight: 600; box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);'>Tailwind Tugma</button>",
   },
 ];
